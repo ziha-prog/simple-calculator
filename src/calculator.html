@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+  </head>
+  <body>
+    <form>
+      <label>Number 1</label><br>
+      <input type="number" id="angka1" placeholder="Enter the first number"><br>
+      <label>Number 2</label><br>
+      <input type="number" id="angka2" placeholder="Enter the second number"><br>
+      <button type="button" onclick="hitung('tambah')">+</button>
+      <button type="button" onclick="kurang()">-</button>
+      <button type="button" onclick="kali()">x</button>
+      <button type="button" onclick="bagi()">:</button><br>
+      <label>RESULT</label>
+      <h1 id="result">-</h1>
+    </form>
+    
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+
+    <script>
+      function hitung(operasi){
+        let angka1 = document.getElementById("angka1").value;
+        let angka2 = document.getElementById("angka2").value;
+        let tambah = angka1 + angka2;
+        let kurang = angka1 + angka2;
+        let kali = angka1 * angka2;
+        let bagi = angka1 / angka2;
+        document.getElementById("result").innerHTML = result.toFixed(2);
+      }
+
+      //operasi
+      if (tambah) {
+          hasil = angka1 + angka2;
+        } else if (operasi === 'kurang') {
+          hasil = angka1 - angka2;
+        } else if (operasi === 'kali') {
+          hasil = angka1 * angka2;
+        } else if (operasi === 'bagi') {
+          hasil = angka1 / angka2;
+        }
+      
+    </script>
+  </body>
+</html>
